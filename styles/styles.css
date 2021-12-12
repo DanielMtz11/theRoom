@@ -1,0 +1,105 @@
+:root{
+    --Primary:#121f3d;
+    --white:#fff;
+    --gray: #2a324b;
+}
+
+/* Resetea el margin y padding */
+*{
+    margin: 0px;
+    border:0px;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif;
+    font-weight: lighter;
+    color:var(--white);
+    background-color: var(--Primary);
+    /* para que el body siempre tenga la altura de la pagina */
+    height: 100vh;
+
+}
+
+.nav{
+    border-bottom: 1px solid var(--gray);
+}
+
+.nav-toggle{
+    position: absolute;
+    cursor: pointer;
+    margin: 0 20px;
+    right: 0;
+    top: 0;
+}
+
+.nav-toggle svg{
+    width: 25px;
+    margin-top: 15px;
+}
+
+.nav-svg-close{
+    display: none;
+}
+
+.nav-check{
+    display: none;
+}
+.nav-check:checked ~ ul.nav-menu li  {
+    display: block;
+}
+.nav-check:checked ~ label.nav-toggle .nav-svg-close  {
+    display: block;
+}
+.nav-check:checked ~ label.nav-toggle .nav-svg-menu  {
+    display: none;
+}
+
+
+.nav-menu{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    margin-top:10px;
+    font-size: 20px;
+    width: 90%;
+}
+
+.nav-menu li>a{
+text-decoration: none;
+color: var(--white);
+}
+.nav-logo{
+    margin-left: -20px;
+}
+
+
+.nav-menu li{
+    display: none;
+}
+
+/* el primer hijo del menu dentro de la nav */
+.nav-menu li:first-child{
+    margin-right: auto; 
+    display: block;
+
+}
+
+/*? TABLETS */
+@media(min-width: 768px){
+    
+    .nav-toggle{
+        display: none;
+    }
+
+    .nav-menu{
+        flex-direction: row;
+    }
+
+    .nav-menu li{
+        display: block;
+        padding: 0 20px;
+    }
+}
+
