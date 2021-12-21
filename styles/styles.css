@@ -2,6 +2,11 @@
     --Primary:#121f3d;
     --white:#fff;
     --gray: #2a324b;
+    /* --neon: #0a2929; */
+    --shadow-color:#0c3768;
+    --shadow-color-light:  #007399;
+    --Cyan: hsl(178, 100%, 50%);
+
 }
 
 /* Resetea el margin y padding */
@@ -18,7 +23,12 @@ body{
     background-color: var(--Primary);
     /* para que el body siempre tenga la altura de la pagina */
     height: 100vh;
+    width: 100vw;
 
+}
+
+h1{
+    text-transform: capitalize ;
 }
 
 .nav{
@@ -48,6 +58,7 @@ body{
 .nav-check:checked ~ ul.nav-menu li  {
     display: block;
 }
+
 .nav-check:checked ~ label.nav-toggle .nav-svg-close  {
     display: block;
 }
@@ -69,9 +80,67 @@ body{
 .nav-menu li>a{
 text-decoration: none;
 color: var(--white);
+padding: 0 10px;
 }
-.nav-logo{
-    margin-left: -20px;
+
+.nav-menu li>a .home{
+    color: var(--Cyan);
+}
+
+.lista{
+    display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.lista:hover {
+	cursor: pointer;
+}
+
+.lista-content{
+	position: relative;
+
+}
+
+
+.lista .home::after{
+    position: absolute;
+	content: "";
+	width: 100%;
+	height: 4px;
+	background-color: rgba(41, 157, 252, 0.747);
+	left: 50%;
+	bottom: -5px;
+    left: 0;
+}
+
+
+
+.lista-content::after  {
+	position: absolute;
+	content: "";
+	width: 0%;
+	height: 4px;
+	background-color: rgba(41, 157, 252, 0.747);
+	left: 50%;
+	bottom: -5px;
+	transition: all 0.4s ease-in-out;
+}
+
+
+.lista:hover .lista-content::after {
+	width: 100%;
+	left: 0;
+}
+
+
+.lista:hover .lista-content{
+    color: rgba(41, 157, 252, 0.747);
+}
+
+
+.home{
+    /* box-shadow: 0px 2px 2px var(--Cyan); */
 }
 
 
@@ -81,14 +150,112 @@ color: var(--white);
 
 /* el primer hijo del menu dentro de la nav */
 .nav-menu li:first-child{
-    margin-right: auto; 
+    margin-right: auto;
     display: block;
+}
+
+
+
+
+.nav-logo{
+    margin-left: -20px;
+}
+
+
+
+.theRoom-logo {
+
+    margin: 30px 15px 0px;
+    /* margin */
+    font-size: 50px;
+
+    /* font-size: 65px; */
+    text-transform: uppercase;
+    font-family: "Archivo Black", "Archivo", sans-serif;
+    font-weight: normal;
+    display: block;
+    height: auto;
+    text-align: center;
+
+    color:#ffffff ;
+    animation: neon 3s infinite;
+}
+
+@keyframes neon {
+0% {
+  text-shadow: -1px -1px 1px var(--shadow-color-light), -1px 1px 1px var(--shadow-color-light), 1px -1px 1px var(--shadow-color-light), 1px 1px 1px var(--shadow-color-light),
+  0 0 3px var(--shadow-color-light), 0 0 10px var(--shadow-color-light), 0 0 20px var(--shadow-color-light),
+  0 0 30px var(--shadow-color), 0 0 40px var(--shadow-color), 0 0 50px var(--shadow-color), 0 0 70px var(--shadow-color), 0 0 100px var(--shadow-color), 0 0 200px var(--shadow-color);
+}
+50% {
+  text-shadow: -1px -1px 1px var(--shadow-color-light), -1px 1px 1px var(--shadow-color-light), 1px -1px 1px var(--shadow-color-light), 1px 1px 1px var(--shadow-color-light),
+  0 0 5px var(--shadow-color-light), 0 0 15px var(--shadow-color-light), 0 0 25px var(--shadow-color-light),
+  0 0 40px var(--shadow-color), 0 0 50px var(--shadow-color), 0 0 60px var(--shadow-color), 0 0 80px var(--shadow-color), 0 0 110px var(--shadow-color), 0 0 210px var(--shadow-color);
+}
+100% {
+  text-shadow: -1px -1px 1px var(--shadow-color-light), -1px 1px 1px var(--shadow-color-light), 1px -1px 1px var(--shadow-color-light), 1px 1px 1px var(--shadow-color-light),
+  0 0 3px var(--shadow-color-light), 0 0 10px var(--shadow-color-light), 0 0 20px var(--shadow-color-light),
+  0 0 30px var(--shadow-color), 0 0 40px var(--shadow-color), 0 0 50px var(--shadow-color), 0 0 70px var(--shadow-color), 0 0 100px var(--shadow-color), 0 0 200px var(--shadow-color);
+}
+}
+
+
+@keyframes neon {
+    0% {
+      text-shadow: -1px -1px 1px var(--shadow-color-light), -1px 1px 1px var(--shadow-color-light), 1px -1px 1px var(--shadow-color-light), 1px 1px 1px var(--shadow-color-light),
+      0 0 3px var(--shadow-color-light), 0 0 10px var(--shadow-color-light), 0 0 20px var(--shadow-color-light),
+      0 0 30px var(--shadow-color), 0 0 40px var(--shadow-color), 0 0 50px var(--shadow-color), 0 0 70px var(--shadow-color), 0 0 100px var(--shadow-color), 0 0 200px var(--shadow-color);
+    }
+    50% {
+      text-shadow: -1px -1px 1px var(--shadow-color-light), -1px 1px 1px var(--shadow-color-light), 1px -1px 1px var(--shadow-color-light), 1px 1px 1px var(--shadow-color-light),
+      0 0 5px var(--shadow-color-light), 0 0 15px var(--shadow-color-light), 0 0 25px var(--shadow-color-light),
+      0 0 40px var(--shadow-color), 0 0 50px var(--shadow-color), 0 0 60px var(--shadow-color), 0 0 80px var(--shadow-color), 0 0 110px var(--shadow-color), 0 0 210px var(--shadow-color);
+    }
+    100% {
+      text-shadow: -1px -1px 1px var(--shadow-color-light), -1px 1px 1px var(--shadow-color-light), 1px -1px 1px var(--shadow-color-light), 1px 1px 1px var(--shadow-color-light),
+      0 0 3px var(--shadow-color-light), 0 0 10px var(--shadow-color-light), 0 0 20px var(--shadow-color-light),
+      0 0 30px var(--shadow-color), 0 0 40px var(--shadow-color), 0 0 50px var(--shadow-color), 0 0 70px var(--shadow-color), 0 0 100px var(--shadow-color), 0 0 200px var(--shadow-color);
+    }
+}
+
+.theRoom-img{
+    width: 50vw;
+    margin: 0px 25vw;
+    overflow: hidden;
+    /* width: 50vw; */
+    /* margin: 30px 15px 0px; */
 
 }
 
+.theRoom-section{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    /* width: 40vw; */
+    margin: 20vw;
+    padding: 20px;
+    border-radius: 5%;
+    background-color:#051031;
+
+    -webkit-box-shadow: -4px -14px 75px 1px rgba(84,161,255,1);
+-moz-box-shadow: -4px -14px 75px 1px rgba(84,161,255,1);
+box-shadow: -4px -14px 75px 1px rgba(84,161,255,1);
+
+}
+
+.theRoom-section-title{
+    padding: 10px 0;
+}
+
+.theRoom-section-parrafo{
+    text-align: center;
+}
+
+
 /*? TABLETS */
 @media(min-width: 768px){
-    
+
     .nav-toggle{
         display: none;
     }
@@ -101,5 +268,53 @@ color: var(--white);
         display: block;
         padding: 0 20px;
     }
+
+    .nav-menu{
+        width: 100%;
+    }
+
+    .theRoom-logo{
+        font-size: 65px;
+    }
+
+    .theRoom-card{
+        display: flex;
+    }
+
+    .theRoom-section{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 40px;
+        padding: 20px;
+        background-color:#051031;
+        height: 30vh;
+
+        /* border: 1px solid var(--Cyan); */
+    }
 }
 
+@media(min-width: 1200px){
+
+    .theRoom-main{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .theRoom-img{
+
+        width: 400px
+
+    }
+
+    .theRoom-section{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 40px;
+        padding: 20px;
+        background-color:#051031;
+        height: 40vh;
+}
