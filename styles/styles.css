@@ -24,6 +24,7 @@ body{
     /* para que el body siempre tenga la altura de la pagina */
     height: 100vh;
     width: 100vw;
+    overflow-x: hidden;
 
 }
 
@@ -235,8 +236,10 @@ padding: 0 10px;
     /* width: 40vw; */
     margin: 20vw;
     padding: 20px;
-    border-radius: 5%;
+    border-radius: 15px;
     background-color:#051031;
+    border: 1px solid var(--Cyan);
+
 
     -webkit-box-shadow: -4px -14px 75px 1px rgba(84,161,255,1);
 -moz-box-shadow: -4px -14px 75px 1px rgba(84,161,255,1);
@@ -254,8 +257,7 @@ box-shadow: -4px -14px 75px 1px rgba(84,161,255,1);
 
 
 /*? TABLETS */
-@media(min-width: 768px){
-
+@media(min-width: 768px) {
     .nav-toggle{
         display: none;
     }
@@ -288,9 +290,13 @@ box-shadow: -4px -14px 75px 1px rgba(84,161,255,1);
         margin: 40px;
         padding: 20px;
         background-color:#051031;
-        height: 30vh;
+        width: 50vw;
+        /* height: 90%; */
 
-        /* border: 1px solid var(--Cyan); */
+    }
+
+    .theRoom-section-title{
+        padding: 30px 0;
     }
 }
 
@@ -308,6 +314,9 @@ box-shadow: -4px -14px 75px 1px rgba(84,161,255,1);
         width: 400px
 
     }
+    .theRoom-card{
+        display: flex;
+    }
 
     .theRoom-section{
         display: flex;
@@ -316,5 +325,12 @@ box-shadow: -4px -14px 75px 1px rgba(84,161,255,1);
         margin: 40px;
         padding: 20px;
         background-color:#051031;
-        height: 40vh;
+        /* height: 40vh; */
+}
+
+.theRoom-section-title{
+    padding: 20px 0 40px;
+}
+
+
 }
