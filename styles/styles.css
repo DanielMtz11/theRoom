@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@600&display=swap');
+
 :root{
     --Primary:#121f3d;
     --white:#fff;
@@ -7,6 +9,7 @@
     --shadow-color-light:  #007399;
     --Cyan: hsl(178, 100%, 50%);
 
+    --fuente:'Roboto Mono', monospace;
 }
 
 /* Resetea el margin y padding */
@@ -17,7 +20,8 @@
 }
 
 body{
-    font-family: sans-serif;
+    /* font-family: sans-serif; */
+    font-family: var(--fuente);
     font-weight: lighter;
     color:var(--white);
     background-color: var(--Primary);
