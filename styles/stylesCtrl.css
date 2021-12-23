@@ -330,7 +330,7 @@ box-shadow: 0 2px 5px rgba(0,0,0,.2);
     }
 
     .Items-iconoAfuera>i{
-        scale:1.5 ;
+        transform: scale(3); 
     }
 .Items-item{
     width: auto;
@@ -357,7 +357,7 @@ box-shadow: 0 2px 5px rgba(0,0,0,.2);
 
     .Items-iconoAfuera>i {
         margin-right: 50px;
-        transform: scale(1.75); 
+        transform: scale(3); 
         }
 
     .Items-item{
