@@ -354,10 +354,12 @@ box-shadow: 0 2px 5px rgba(0,0,0,.2);
 }
 
 @media(min-width:1200px){
+
     .Items-iconoAfuera>i {
-        margin-right: 50px;
+        /* margin-right: 50px; */
         scale: 2;
     }
+
     .Items-item{
         /* height: 40vh; */
         display: grid;
