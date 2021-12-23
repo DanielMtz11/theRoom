@@ -357,7 +357,7 @@ box-shadow: 0 2px 5px rgba(0,0,0,.2);
 
     .Items-iconoAfuera>i {
         /* margin-right: 50px; */
-        scale: 2;
+        scale: (2);
     }
 
     .Items-item{
@@ -372,10 +372,6 @@ box-shadow: 0 2px 5px rgba(0,0,0,.2);
     }
 
 
-.Items-icono{
-    scale: 2;
-
-}
     #muestrario{
         background: 1px;
         width: auto;
