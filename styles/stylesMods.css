@@ -214,12 +214,15 @@ padding: 0 10px;
         }
         
 
+
+
+
         
 .boton{
   
     position:relative;
     display:flex;
-    margin: 0px 100px;
+    margin: 0px 80px;
     justify-content: center;
     padding:15px 30px;
     color:#2196f3;
@@ -317,6 +320,7 @@ padding: 0 10px;
   
   }
   
+
   
     
 /*? TABLETS */
