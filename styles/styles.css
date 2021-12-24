@@ -262,6 +262,10 @@ box-shadow: -4px -14px 75px 1px rgba(84,161,255,1);
     text-align: center;
 }
 
+footer{
+    text-align: center;
+}
+
 
 /*? TABLETS */
 @media(min-width: 768px) {
