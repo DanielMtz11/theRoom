@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Room</title>
-    <link rel="stylesheet" href="/styles/stylesCtrl.css">
+    <title>The Room</title> 
+    <link rel="stylesheet" href="./styles/stylesBtnAdd.css">   
     <link href="https://fonts.googleapis.com/css?family=Archivo+Black&display=swap" rel="stylesheet">
 </head>
+
 <body>
+    <script src="js/index.js"></script>
 
     <header>  
         <nav class="nav">
@@ -71,19 +73,30 @@
                 </li>
 
                 <li class="lista">
-                    <a class="lista-content control" href="./control.html">Control</a>
+                    <a class="lista-content " href="./control.html">Control</a>
                 </li>
 
                 <li class=" lista">
-                    <a class="lista-content" href="./modos.html">Modos</a>
+                    <a class="lista-content modos" href="#">Modos</a>
                 </li>
             </ul>
         </nav>
     </header>
 
-    <h1 class="logo">Control</h1>
 
         <main class="Items-flex">
+
+            <section class="box">
+                <p class="Items-p">Crea tus propios modos, para que puedas utilizarlos en pomodoro o full time </p>
+
+                <div class="inputBox">
+                    
+                    <input class="Mod-name" type="text" required="">
+                    <label>Mod Name</label>
+                </div>
+
+            </section>
+            
 
         <div class=Items-iconoAfuera>
 
@@ -139,6 +152,16 @@
                 
             </section>
         </div>
+
+        
+        <a class="boton" href='./modos.html'>
+
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Guardar
+        </a>
 
         </main>
 

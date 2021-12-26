@@ -222,6 +222,7 @@ padding: 0 10px;
     flex-direction: column;
 }
 
+
 .Items-iconoAfuera{
     display: flex;
     align-items: center;
@@ -233,10 +234,6 @@ padding: 0 10px;
 
 }
 
-.Items-iconoAfuera>i{
-    /* box-shadow: -4px -14px 75px 1px rgba(84,161,255,1); */
-
-}
 
 .Items-item{
     min-width: 50%;
