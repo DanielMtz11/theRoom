@@ -345,8 +345,38 @@ box-shadow: 0 2px 5px rgba(0,0,0,.2);
     
     position:absolute;
     display:block;
-    
-  }
+    }
+
+    .pomodoro-contenedor2{
+        max-width: 350px;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+  
+/*? TABLETS */
+@media(min-width: 768px) {
+    .nav-toggle{
+        display: none;
+    }
+
+    .nav-menu{
+        flex-direction: row;
+    }
+
+    .nav-menu li{
+        display: block;
+        padding: 0 20px;
+    }
+
+    .nav-menu{
+        width: 100%;
+    }
+
+    .theRoom-logo{
+        font-size: 65px;
+    }}
 
 
 

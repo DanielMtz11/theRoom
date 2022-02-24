@@ -17,6 +17,7 @@
     margin: 0px;
     border:0px;
     box-sizing: border-box;
+    font-family: var(--fuente);
 }
 
 body{
@@ -30,6 +31,8 @@ body{
     width: 100vw;
     overflow-x: hidden;
 
+
+    
 }
 
 h1{
@@ -168,23 +171,23 @@ padding: 0 10px;
 
 
 
+
+
+
 .theRoom-logo {
-
-    margin: 30px 15px 0px;
-    /* margin */
-    font-size: 50px;
-
-    /* font-size: 65px; */
-    text-transform: uppercase;
-    font-family: "Archivo Black", "Archivo", sans-serif;
-    font-weight: normal;
-    display: block;
-    height: auto;
-    text-align: center;
-
-    color:#ffffff ;
-    animation: neon 3s infinite;
+	margin: 30px ;
+	font-size: 54px;
+	/* font-size: 65px; */
+	text-transform: uppercase;
+	font-family: "Archivo Black", "Archivo", sans-serif;
+	font-weight: bold;
+	display: block;
+	height: auto;
+	text-align: center;
+	color: #ffffff;
+	animation: neon 3s infinite;
 }
+
 
 @keyframes neon {
 0% {
@@ -222,54 +225,143 @@ padding: 0 10px;
       0 0 30px var(--shadow-color), 0 0 40px var(--shadow-color), 0 0 50px var(--shadow-color), 0 0 70px var(--shadow-color), 0 0 100px var(--shadow-color), 0 0 200px var(--shadow-color);
     }
 }
+.pomodoro-contenedor {
+	max-width: 330px;
+	margin: auto;
+	background-color: rgb(59 143 223 / 10%);
+	padding: 20px 0px 30px;
+	border-radius: 6px;
+	margin-bottom: 20px;
+	width: 100%;
+	text-align: center;
+}
 
-.theRoom-img{
-    width: 50vw;
-    margin: 0px 25vw;
-    overflow: hidden;
-    /* width: 50vw; */
-    /* margin: 30px 15px 0px; */
+.timer {
+	font-size: 90px;
+	font-weight: bold;
+	margin-top: 20px;
+}
+
+@media(min-width: 768px){
+    .pomodoro-contenedor{max-width: 480px;}
+    .timer{font-size: 120px;}
 
 }
-/* .theRoom-card{
-width: 80vw;} */
-a{
-    text-decoration: none;
-
+section{
+    text-align: center;
+    padding-bottom: 20px;
 }
-a>.theRoom-section{
-    display: flex;
-    flex-direction: column;
-    /* justify-content: center; */
+
+
+.pomodoro-selector {
+    text-align: center;
+
+    display: inline-flex;
+    /* -webkit-box-pack: center; */
+    justify-content: center;
+    /* -webkit-box-align: center; */
     align-items: center;
-    /* width: 40vw; */
-    margin: 10vw 10vw 20vw;
-    /* width: 70vw; */
-    padding: 20px;
-    border-radius: 15px;
-    background-color:#051031;
-    border: 1px solid var(--Cyan);
+}
+
+button{
+    
+        border: none;
+        margin: 0px;
+        border-radius: 4px;
+        /* font-family: ArialRounded; */
+        font-size: 16px;
+        padding: 5px 15px;
+        height: 28px;
+        cursor: pointer;
+        background: none rgba(0, 0, 0, 0.15);
+        box-shadow: none;
+        color: white;
+        opacity: 1;
+        font-weight: bold;
+    letter-spacing: normal;
+    word-spacing: normal;
+    line-height: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: center;
+    align-items: flex-start;
+
+}
+
+
+.botonStar{
+
+        cursor: pointer;
+        border: none;
+        margin: 20px 0px 0px;
+        padding: 0px 12px;
+        border-radius: 4px;
+        box-shadow: rgb(235, 235, 235) 0px 6px 0px;
+        font-family: ArialRounded;
+        font-size: 22px;
+        height: 55px;
+        font-weight: bold;
+        width: 200px;
+        background-color: white;
+        transition: color 0.5s ease-in-out 0s;
+        color: var(--Primary);
+    
+}
+
+.num {
+    font-size: 16px;
+    opacity: 0.6;
+    margin-bottom: 4px;
+}
+
+.pomodoro-contenedor2{
+    max-width: 700px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pomodoro-contenedor2> div{
+    margin: 10px;
+}
+
+.pomodoro-contenedor2> div>label{
     cursor: pointer;
-    color: #ffffff;
-
-
-    -webkit-box-shadow: -4px -14px 75px 1px rgba(84,161,255,1);
--moz-box-shadow: -4px -14px 75px 1px rgba(84,161,255,1);
-box-shadow: -4px -14px 75px 1px rgba(84,161,255,1);
-
 }
 
-a>.theRoom-section-title{
-    padding: 10px 0;
+.pomodoro-contenedor2> div>label>input[type="checkbox"]{
+    display: none;
 }
 
-a>.theRoom-section-parrafo{
-    text-align: center;
+.pomodoro-contenedor2> div>label>span{
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    margin-bottom: 10px;
+    color: #555;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, .5);
+    background-color:#424242;
+    border-radius: 30px;
+    font-size: 20px;
+    transition: 0.5s;
+    user-select: none;
+    overflow: hidden;
 }
 
-footer{
-    text-align: center;
+
+.pomodoro-contenedor2 > div > label > input[type="checkbox"]:checked ~ span {
+	/* background: var(--Cyan); */
+	color: #7db3e3;
+	background: #2196f3;
+	box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3;
+	transition-delay: .45s;
 }
+
+
+
+
 
 
 /*? TABLETS */
@@ -290,63 +382,4 @@ footer{
     .nav-menu{
         width: 100%;
     }
-
-    .theRoom-logo{
-        font-size: 65px;
-    }
-
-    .theRoom-card{
-        display: flex;
-    }
-
-    .theRoom-section{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin: 40px;
-        padding: 20px;
-        background-color:#051031;
-        width: 50vw;
-        /* height: 90%; */
-
-    }
-
-    .theRoom-section-title{
-        padding: 30px 0;
-    }
-}
-
-@media(min-width: 1200px){
-
-    .theRoom-main{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .theRoom-img{
-
-        width: 400px
-
-    }
-    .theRoom-card{
-        display: flex;
-    }
-
-    a>.theRoom-section{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin: 40px;
-        padding: 20px;
-        background-color:#051031;
-        /* height: 40vh; */
-}
-
-a>.theRoom-section-title{
-    padding: 20px 0 40px;
-}
-
-
 }
